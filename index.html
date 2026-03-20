@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculateur Taxe de Bienvenue Québec 2025 – Gratuit et Précis</title>
+  <meta name="description" content="Calculez votre taxe de bienvenue au Québec en 2025. Droits de mutation immobilière, supplément Montréal, remboursement premiers acheteurs. Gratuit et instantané.">
+  <meta name="keywords" content="calculateur taxe bienvenue québec, droits de mutation immobilière, taxe bienvenue montréal 2025, premiers acheteurs québec">
+  <meta property="og:title" content="Calculateur Taxe de Bienvenue Québec 2025">
+  <meta property="og:description" content="Calculez votre taxe de bienvenue au Québec instantanément. Gratuit.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9586278174692187" crossorigin="anonymous"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f4f7fc;
+      --bg-card: #ffffff;
+      --bg-subtle: #edf1f9;
+      --accent: #1a4fd6;
+      --accent-light: #eef2ff;
+      --accent-border: rgba(26,79,214,0.2);
+      --text: #0f1b35;
+      --text-muted: #6b7a99;
+      --text-dim: #a0aec0;
+      --border: rgba(0,0,0,0.07);
+      --green: #15803d;
+      --green-light: #f0fdf4;
+      --green-border: rgba(21,128,61,0.2);
+      --amber: #b45309;
+      --amber-light: #fffbeb;
+      --shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 20px rgba(0,0,0,0.05);
+      --shadow-lg: 0 4px 32px rgba(26,79,214,0.12);
+      --radius: 18px;
+      --radius-sm: 10px;
+    }
+
+    body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; min-height: 100vh; line-height: 1.6; }
+    .page-wrap { max-width: 780px; margin: 0 auto; padding: 0 20px 80px; }
+
+    header { padding: 56px 0 40px; animation: fadeUp 0.5s ease both; }
+    .header-flag {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--accent); color: white;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 7px 16px; border-radius: 99px; margin-bottom: 22px;
+    }
+    h1 { font-family: 'Bitter', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.15; margin-bottom: 14px; color: var(--text); }
+    h1 em { font-style: italic; color: var(--accent); }
+    .header-sub { color: var(--text-muted); font-size: 16px; max-width: 520px; line-height: 1.75; }
+
+    .ad-slot { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 20px; text-align: center; color: var(--text-dim); font-size: 13px; margin-bottom: 28px; min-height: 100px; display: flex; align-items: center; justify-content: center; }
+
+    /* ── HERO ── */
+    .hero-card {
+      background: linear-gradient(135deg, #0f2d7a 0%, #1a4fd6 100%);
+      border-radius: var(--radius); padding: 36px; margin-bottom: 20px;
+      box-shadow: var(--shadow-lg); animation: fadeUp 0.5s 0.05s ease both;
+    }
+    .hero-label { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 10px; }
+    .hero-amount { font-family: 'Bitter', serif; font-size: clamp(3rem, 8vw, 4.5rem); font-weight: 700; color: white; line-height: 1; margin-bottom: 6px; }
+    .hero-sub { font-size: 14px; color: rgba(255,255,255,0.65); margin-bottom: 24px; }
+
+    .hero-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    @media (max-width: 480px) { .hero-grid { grid-template-columns: 1fr 1fr; } }
+    .hero-stat { background: rgba(255,255,255,0.1); border-radius: var(--radius-sm); padding: 14px; }
+    .hero-stat-label { font-size: 11px; color: rgba(255,255,255,0.55); margin-bottom: 4px; }
+    .hero-stat-val { font-size: 1rem; font-weight: 700; color: white; }
+
+    /* ── INPUT CARD ── */
+    .input-card { background: var(--bg-card); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); padding: 28px; margin-bottom: 20px; animation: fadeUp 0.5s 0.1s ease both; }
+    .card-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 20px; }
+
+    .price-display { font-family: 'Bitter', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1; }
+    .price-sub { font-size: 13px; color: var(--text-dim); margin-bottom: 20px; }
+
+    input[type="range"] {
+      -webkit-appearance: none; width: 100%; height: 4px;
+      background: var(--bg-subtle); border-radius: 99px; outline: none; cursor: pointer; margin-bottom: 8px;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%;
+      background: var(--accent); border: 3px solid white;
+      box-shadow: 0 0 0 2px var(--accent); cursor: pointer;
+    }
+    .range-labels { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-dim); margin-bottom: 24px; }
+
+    /* ── TOGGLES ── */
+    .toggle-section { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    @media (max-width: 480px) { .toggle-section { grid-template-columns: 1fr; } }
+    .toggle-item { display: flex; align-items: center; justify-content: space-between; background: var(--bg-subtle); border-radius: var(--radius-sm); padding: 14px 16px; cursor: pointer; transition: background 0.15s; }
+    .toggle-item:hover { background: var(--accent-light); }
+    .toggle-item.active { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .toggle-label { font-size: 14px; font-weight: 500; color: var(--text); }
+    .toggle-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .toggle-switch { width: 40px; height: 22px; border-radius: 99px; background: var(--text-dim); position: relative; transition: background 0.2s; flex-shrink: 0; margin-left: 12px; }
+    .toggle-switch.on { background: var(--accent); }
+    .toggle-switch::after { content: ''; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: white; transition: transform 0.2s; }
+    .toggle-switch.on::after { transform: translateX(18px); }
+
+    /* ── PALIERS ── */
+    .paliers-card { background: var(--bg-card); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); overflow: hidden; margin-bottom: 20px; animation: fadeUp 0.5s 0.15s ease both; }
+    .palier-row { display: grid; grid-template-columns: 1fr 80px 90px; align-items: center; padding: 13px 24px; border-bottom: 1px solid var(--border); font-size: 14px; gap: 12px; }
+    .palier-row:last-child { border-bottom: none; }
+    .palier-row.header { background: var(--bg-subtle); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dim); }
+    .palier-row.active-row { background: var(--accent-light); }
+    .palier-name { color: var(--text-muted); }
+    .palier-taux { text-align: center; font-weight: 600; color: var(--accent); }
+    .palier-montant { text-align: right; font-weight: 600; color: var(--text); }
+    .palier-bar { height: 4px; background: var(--bg-subtle); border-radius: 99px; margin-top: 4px; overflow: hidden; }
+    .palier-bar-fill { height: 100%; background: var(--accent); border-radius: 99px; transition: width 0.4s; }
+
+    /* ── FRAIS TOTAUX ── */
+    .frais-card { background: var(--bg-card); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); overflow: hidden; margin-bottom: 20px; animation: fadeUp 0.5s 0.2s ease both; }
+    .frais-row { display: flex; justify-content: space-between; align-items: center; padding: 13px 24px; border-bottom: 1px solid var(--border); font-size: 14px; }
+    .frais-row:last-child { border-bottom: none; font-weight: 700; font-size: 15px; background: var(--accent-light); }
+    .frais-name { color: var(--text-muted); }
+    .frais-name.strong { color: var(--text); font-weight: 700; }
+    .frais-amt { font-weight: 500; }
+    .frais-amt.blue { color: var(--accent); font-weight: 700; }
+    .frais-amt.green { color: var(--green); }
+    .frais-amt.amber { color: var(--amber); }
+
+    /* ── NOTICE ── */
+    .notice { background: var(--green-light); border: 1px solid var(--green-border); border-radius: var(--radius-sm); padding: 14px 18px; font-size: 14px; color: var(--green); margin-bottom: 20px; display: none; animation: fadeUp 0.3s ease both; }
+    .notice.show { display: block; }
+
+    /* ── SEO ── */
+    .seo-section { margin-top: 52px; padding-top: 40px; border-top: 1px solid var(--border); animation: fadeUp 0.5s 0.3s ease both; }
+    .seo-section h2 { font-family: 'Bitter', serif; font-size: 1.9rem; font-weight: 700; margin-bottom: 14px; color: var(--text); }
+    .seo-section h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 24px 0 8px; }
+    .seo-section p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 12px; }
+    .fact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    @media (max-width: 480px) { .fact-grid { grid-template-columns: 1fr; } }
+    .fact-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 18px; box-shadow: var(--shadow); }
+    .fact-label { font-size: 12px; color: var(--text-dim); margin-bottom: 4px; }
+    .fact-val { font-size: 1.05rem; font-weight: 700; color: var(--accent); }
+
+    footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-note { font-size: 12px; color: var(--text-dim); }
+    .footer-badge { font-size: 11px; color: var(--text-dim); background: var(--bg-card); border: 1px solid var(--border); padding: 5px 12px; border-radius: 99px; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header>
+    <div class="header-flag">🏛️ Droits de mutation immobilière 2025</div>
+    <h1>Taxe de <em>bienvenue</em> Québec</h1>
+    <p class="header-sub">Calculez exactement les droits de mutation que vous devrez payer lors de l'achat de votre propriété au Québec — incluant le supplément de Montréal.</p>
+  </header>
+
+  <div class="ad-slot"><span>Espace publicitaire – Google AdSense (728×90)</span></div>
+
+  <!-- HERO -->
+  <div class="hero-card">
+    <div class="hero-label">Taxe de bienvenue estimée</div>
+    <div class="hero-amount" id="hero-amount">–</div>
+    <div class="hero-sub" id="hero-sub">droits de mutation à payer</div>
+    <div class="hero-grid">
+      <div class="hero-stat">
+        <div class="hero-stat-label">Prix de la propriété</div>
+        <div class="hero-stat-val" id="h-prix">–</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-label">Taxe de base (QC)</div>
+        <div class="hero-stat-val" id="h-base">–</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-label">Supplément Montréal</div>
+        <div class="hero-stat-val" id="h-mtl">–</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-label">Remboursement 1ers acheteurs</div>
+        <div class="hero-stat-val" id="h-remb">–</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-label">Total à payer</div>
+        <div class="hero-stat-val" id="h-total">–</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-label">% du prix d'achat</div>
+        <div class="hero-stat-val" id="h-pct">–</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INPUT -->
+  <div class="input-card">
+    <div class="card-label">Paramètres</div>
+    <div class="price-display" id="price-display">400 000 $</div>
+    <div class="price-sub">prix d'achat de la propriété</div>
+    <input type="range" id="prix" min="50000" max="2000000" step="5000" value="400000">
+    <div class="range-labels"><span>50 000 $</span><span>2 000 000 $</span></div>
+
+    <div class="toggle-section">
+      <div class="toggle-item" id="toggle-mtl" onclick="toggleMTL()">
+        <div>
+          <div class="toggle-label">Propriété à Montréal</div>
+          <div class="toggle-sub">Supplément de 0,5 % au-delà de 500k$</div>
+        </div>
+        <div class="toggle-switch" id="switch-mtl"></div>
+      </div>
+      <div class="toggle-item" id="toggle-first" onclick="toggleFirst()">
+        <div>
+          <div class="toggle-label">Premier acheteur</div>
+          <div class="toggle-sub">Remboursement jusqu'à 5 000 $</div>
+        </div>
+        <div class="toggle-switch" id="switch-first"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTICE PREMIER ACHETEUR -->
+  <div class="notice" id="first-notice">
+    ✅ En tant que premier acheteur, vous pouvez demander un remboursement partiel de la taxe de bienvenue. Le remboursement maximal est de 5 000 $ pour une propriété neuve ou de revente admissible.
+  </div>
+
+  <!-- PALIERS -->
+  <div class="paliers-card">
+    <div class="palier-row header">
+      <span>Palier de valeur</span>
+      <span style="text-align:center;">Taux</span>
+      <span style="text-align:right;">Montant</span>
+    </div>
+    <div id="paliers-list"></div>
+  </div>
+
+  <!-- FRAIS TOTAUX -->
+  <div class="frais-card">
+    <div class="frais-row">
+      <span class="frais-name" style="font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-dim);">Récapitulatif des frais d'achat</span>
+      <span></span>
+    </div>
+    <div class="frais-row">
+      <span class="frais-name">Taxe de bienvenue (base)</span>
+      <span class="frais-amt blue" id="f-base">–</span>
+    </div>
+    <div class="frais-row" id="f-mtl-row" style="display:none;">
+      <span class="frais-name">Supplément Montréal</span>
+      <span class="frais-amt blue" id="f-mtl">–</span>
+    </div>
+    <div class="frais-row" id="f-remb-row" style="display:none;">
+      <span class="frais-name">Remboursement 1ers acheteurs</span>
+      <span class="frais-amt green" id="f-remb">–</span>
+    </div>
+    <div class="frais-row">
+      <span class="frais-name">Frais de notaire estimés</span>
+      <span class="frais-amt amber" id="f-notaire">–</span>
+    </div>
+    <div class="frais-row">
+      <span class="frais-name">Inspection préachat estimée</span>
+      <span class="frais-amt amber">~500 $</span>
+    </div>
+    <div class="frais-row">
+      <span class="frais-name strong">Total frais de clôture estimés</span>
+      <span class="frais-amt blue" id="f-total">–</span>
+    </div>
+  </div>
+
+  <div class="ad-slot"><span>Espace publicitaire – Google AdSense (336×280)</span></div>
+
+  <!-- SEO -->
+  <section class="seo-section">
+    <h2>Guide taxe de bienvenue Québec 2025</h2>
+    <p>La taxe de bienvenue, officiellement appelée droits de mutation immobilière, est une taxe municipale que vous devez payer lorsque vous achetez une propriété au Québec. Elle est calculée selon une grille de taux progressifs basée sur la valeur de la propriété.</p>
+
+    <div class="fact-grid">
+      <div class="fact-card">
+        <div class="fact-label">Palier 1 — jusqu'à 61 500 $</div>
+        <div class="fact-val">0,5 %</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-label">Palier 2 — 61 500 $ à 307 800 $</div>
+        <div class="fact-val">1,0 %</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-label">Palier 3 — 307 800 $ à 577 600 $</div>
+        <div class="fact-val">1,5 %</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-label">Palier 4 — au-delà de 577 600 $</div>
+        <div class="fact-val">2,0 % (3 % à MTL)</div>
+      </div>
+    </div>
+
+    <h3>Quand doit-on payer la taxe de bienvenue?</h3>
+    <p>La facture est envoyée par la municipalité dans les 30 jours suivant l'enregistrement de l'acte de vente chez le notaire. Vous avez ensuite 30 jours pour payer. Il est donc important de prévoir ce montant dans votre budget d'achat, car il vient s'ajouter à votre mise de fonds.</p>
+
+    <h3>Le supplément de Montréal</h3>
+    <p>La Ville de Montréal applique un taux supplémentaire de 0,5 % sur la tranche de valeur entre 500 000 $ et 999 999 $, et de 1,5 % sur la tranche au-delà de 1 000 000 $. Ce supplément ne s'applique qu'aux propriétés situées sur l'île de Montréal.</p>
+
+    <h3>Remboursement pour les premiers acheteurs</h3>
+    <p>Depuis 2023, les premiers acheteurs peuvent bénéficier d'un remboursement partiel de la taxe de bienvenue pouvant aller jusqu'à 5 000 $. Pour être admissible, vous devez être un particulier, acheter une propriété résidentielle, et ne jamais avoir été propriétaire d'un immeuble résidentiel au Québec.</p>
+  </section>
+
+  <div class="ad-slot" style="margin-top:32px; min-height:250px;"><span>Espace publicitaire – Google AdSense (300×250)</span></div>
+
+  <footer>
+    <div class="footer-note">Calculs basés sur les taux 2025. Les montants peuvent varier selon la municipalité. Consultez un notaire pour votre transaction.</div>
+    <div class="footer-badge">Mis à jour : Janvier 2025</div>
+  </footer>
+
+</div>
+
+<script>
+  let isMTL = false;
+  let isFirst = false;
+
+  const fmt = n => n.toLocaleString('fr-CA', {style:'currency', currency:'CAD', maximumFractionDigits:0});
+
+  function toggleMTL() {
+    isMTL = !isMTL;
+    document.getElementById('toggle-mtl').className = 'toggle-item' + (isMTL ? ' active' : '');
+    document.getElementById('switch-mtl').className = 'toggle-switch' + (isMTL ? ' on' : '');
+    document.getElementById('f-mtl-row').style.display = isMTL ? '' : 'none';
+    calc();
+  }
+
+  function toggleFirst() {
+    isFirst = !isFirst;
+    document.getElementById('toggle-first').className = 'toggle-item' + (isFirst ? ' active' : '');
+    document.getElementById('switch-first').className = 'toggle-switch' + (isFirst ? ' on' : '');
+    document.getElementById('first-notice').className = 'notice' + (isFirst ? ' show' : '');
+    document.getElementById('f-remb-row').style.display = isFirst ? '' : 'none';
+    calc();
+  }
+
+  // Paliers QC 2025
+  const paliersQC = [
+    { label: '0 $ à 61 500 $', max: 61500, taux: 0.005 },
+    { label: '61 500 $ à 307 800 $', max: 307800, taux: 0.010 },
+    { label: '307 800 $ à 577 600 $', max: 577600, taux: 0.015 },
+    { label: '577 600 $ et plus', max: Infinity, taux: 0.020 },
+  ];
+
+  // Paliers supplément MTL
+  const paliersMTL = [
+    { label: '500 000 $ à 999 999 $ (MTL)', min: 500000, max: 999999, taux: 0.005 },
+    { label: '1 000 000 $ et plus (MTL)', min: 1000000, max: Infinity, taux: 0.015 },
+  ];
+
+  function calcTaxeBase(prix) {
+    let tax = 0;
+    let prev = 0;
+    for (const p of paliersQC) {
+      if (prix <= prev) break;
+      const tranche = Math.min(prix, p.max) - prev;
+      tax += tranche * p.taux;
+      prev = p.max;
+    }
+    return tax;
+  }
+
+  function calcTaxeMTL(prix) {
+    let tax = 0;
+    for (const p of paliersMTL) {
+      if (prix <= p.min) continue;
+      const tranche = Math.min(prix, p.max) - p.min;
+      if (tranche > 0) tax += tranche * p.taux;
+    }
+    return tax;
+  }
+
+  function calc() {
+    const prix = parseInt(document.getElementById('prix').value);
+    document.getElementById('price-display').textContent = fmt(prix);
+
+    const taxeBase = calcTaxeBase(prix);
+    const taxeMTL = isMTL ? calcTaxeMTL(prix) : 0;
+    const remb = isFirst ? Math.min(5000, taxeBase + taxeMTL) : 0;
+    const notaire = prix < 200000 ? 1200 : prix < 400000 ? 1500 : prix < 700000 ? 1800 : 2200;
+    const totalTaxe = taxeBase + taxeMTL - remb;
+    const totalFrais = totalTaxe + notaire + 500;
+
+    document.getElementById('hero-amount').textContent = fmt(totalTaxe);
+    document.getElementById('hero-sub').textContent = 'droits de mutation à payer';
+    document.getElementById('h-prix').textContent = fmt(prix);
+    document.getElementById('h-base').textContent = fmt(taxeBase);
+    document.getElementById('h-mtl').textContent = isMTL ? fmt(taxeMTL) : 'N/A';
+    document.getElementById('h-remb').textContent = isFirst ? '− ' + fmt(remb) : 'N/A';
+    document.getElementById('h-total').textContent = fmt(totalTaxe);
+    document.getElementById('h-pct').textContent = (totalTaxe / prix * 100).toFixed(2).replace('.', ',') + ' %';
+
+    document.getElementById('f-base').textContent = fmt(taxeBase);
+    document.getElementById('f-mtl').textContent = fmt(taxeMTL);
+    document.getElementById('f-remb').textContent = '− ' + fmt(remb);
+    document.getElementById('f-notaire').textContent = '~' + fmt(notaire);
+    document.getElementById('f-total').textContent = fmt(totalFrais);
+
+    // Paliers
+    const list = document.getElementById('paliers-list');
+    let prev = 0;
+    list.innerHTML = paliersQC.map((p, i) => {
+      const tranche = Math.min(prix, p.max) - prev;
+      const montant = tranche > 0 ? tranche * p.taux : 0;
+      const isActive = prix > prev;
+      const barPct = tranche > 0 ? Math.min(100, tranche / (p.max === Infinity ? prix - prev : p.max - prev) * 100) : 0;
+      prev = p.max;
+      return `
+        <div class="palier-row ${isActive ? 'active-row' : ''}">
+          <div>
+            <div style="font-size:14px; color:var(--text-muted);">${p.label}</div>
+            <div class="palier-bar"><div class="palier-bar-fill" style="width:${barPct}%;"></div></div>
+          </div>
+          <div class="palier-taux">${(p.taux * 100).toFixed(1)} %</div>
+          <div class="palier-montant">${isActive ? fmt(montant) : '–'}</div>
+        </div>
+      `;
+    }).join('');
+
+    if (isMTL && prix > 500000) {
+      paliersMTL.forEach(p => {
+        if (prix <= p.min) return;
+        const tranche = Math.min(prix, p.max === Infinity ? prix : p.max) - p.min;
+        if (tranche <= 0) return;
+        list.innerHTML += `
+          <div class="palier-row active-row" style="background:var(--accent-light);">
+            <div><div style="font-size:14px; color:var(--accent);">${p.label}</div></div>
+            <div class="palier-taux">${(p.taux * 100).toFixed(1)} %</div>
+            <div class="palier-montant">${fmt(tranche * p.taux)}</div>
+          </div>
+        `;
+      });
+    }
+  }
+
+  document.getElementById('prix').addEventListener('input', calc);
+  calc();
+</script>
+</body>
+</html>
